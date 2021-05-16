@@ -449,7 +449,7 @@ permutacoes_validas([Perms|R]) :-
     Perms = [EspVar|_],
     list_to_set(EspVar,Esp), 
     Esp == EspVar.
-%sem isto ^^^ o puzzle 5 o codigo demora 40 segundos lol
+%sem isto ^^^ o puzzle 5 demora 40 segundos lol
 
 
 %-------------------------------------------------------------------------------
