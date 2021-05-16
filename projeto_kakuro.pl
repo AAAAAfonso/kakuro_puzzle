@@ -440,6 +440,7 @@ resolve_aux_verificacao(Perms_Possiveis,Escolha, Novas_Perms_Possiveis) :-
 %verifica se existe um elemento da lista de "Perms" repetido nos espacos 
 %de uma Permutacao
 
+
 permutacoes_validas([]) :- !.
 
 permutacoes_validas([Perms|R]) :-
@@ -448,6 +449,8 @@ permutacoes_validas([Perms|R]) :-
     Perms = [EspVar|_],
     list_to_set(EspVar,Esp), 
     Esp == EspVar.
+%sem isto ^^^ o puzzle 5 o codigo demora 40 segundos lol
+
 
 %-------------------------------------------------------------------------------
 %      resolve(Puz), em quePuze um puzzle, resolve esse puzzle, isto e, apos a 
