@@ -130,7 +130,11 @@ espacos_fila(H_V,Fila,Espacos) :-
 
 espacos_puzzle(Puzzle,Espacos) :-
     bagof(X,Fila^L_L^(member(Fila,Puzzle),espacos_fila(h,Fila,L_L),member(X,L_L)),L1),
-    bagof(X,Fila^L_L^PuzzleT^(mat_transposta(Puzzle,PuzzleT),member(Fila,PuzzleT),espacos_fila(v,Fila,L_L),member(X,L_L)),L2),
+    bagof(X,Fila^L_L^PuzzleT^(mat_transposta(Puzzle,PuzzleT),
+      member(Fila,PuzzleT),
+      espacos_fila(v,Fila,L_L),
+      member(X,L_L)),
+      L2),
     append(L1,L2,Espacos).
 
 %-------------------------------------------------------------------------------
